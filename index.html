@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Declaración Voluntario</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ 
+  <div id="intro">
+    <div class="sobre" onclick="abrirDoc()">
+      <div class="sobre-label">
+        <p class="sobre-to">DOCUMENTO OFICIAL PARA:</p>
+        <p class="sobre-name">Yadira</p>
+        <div class="sello-intro">DEPT.<br>TRANS-<br>PARENCIA</div>
+      </div>
+    </div>
+    <p class="intro-hint">↑ toca para abrir</p>
+  </div>
+ 
+  <div id="doc">
+   
+    <div id="stamp1" class="stamp">Recibido</div>
+    <div id="stamp2" class="stamp">Transparente ✓</div>
+   
+    <div class="membrete">
+      <div class="membrete-left">
+        <p class="org-name">Departamento de Transparencia para Yadira</p>
+        <p class="doc-title">Declaración Voluntaria<br>de Actividades</p>
+      </div>
+      <div class="folio">
+        Folio: YDR-001<br>
+        Fecha: 23/05/26<br>
+        Clasificación: PARA SUS OJOS
+      </div>
+    </div>
+   
+    <div class="seccion" id="s1">
+      <p class="sec-titulo">I. Datos del Declarante</p>
+   
+      <div class="campo" onclick="reveal(this)">
+        <span class="campo-label">Nombre completo:</span>
+        <span class="campo-linea">
+          <span class="campo-valor">Antonio &nbsp;✓</span>
+          <span class="campo-hint">[ toca ]</span>
+        </span>
+      </div>
+   
+      <div class="campo" onclick="reveal(this)">
+        <span class="campo-label">Ocupación:</span>
+        <span class="campo-linea">
+          <span class="campo-valor">Programador / pensando en ti</span>
+          <span class="campo-hint">[ toca ]</span>
+        </span>
+      </div>
+   
+      <div class="campo" onclick="reveal(this)">
+        <span class="campo-label">Nivel de peligrosidad:</span>
+        <span class="campo-linea">
+          <span class="campo-valor">Ninguno. Cero. Nulo. 🙂</span>
+          <span class="campo-hint">[ toca ]</span>
+        </span>
+      </div>
+   
+      <div class="campo" onclick="reveal(this)">
+        <span class="campo-label">¿Tiene cuentas ocultas?</span>
+        <span class="campo-linea">
+          <span class="campo-valor">Solo la del banco</span>
+          <span class="campo-hint">[ toca ]</span>
+        </span>
+      </div>
+    </div>
+   
+    <div class="seccion" id="s2">
+      <p class="sec-titulo">II. Reporte de Movimientos (últimas 24hrs)</p>
+   
+      <div class="campo" onclick="reveal(this)">
+        <span class="campo-label">08:00 — Ubicación:</span>
+        <span class="campo-linea">
+          <span class="campo-valor">Despertando, pensé en ti</span>
+          <span class="campo-hint">[ toca ]</span>
+        </span>
+      </div>
+   
+      <div class="campo" onclick="reveal(this)">
+        <span class="campo-label">12:00 — Actividad:</span>
+        <span class="campo-linea">
+          <span class="campo-valor">Programando. Sin distracciones*</span>
+          <span class="campo-hint">[ toca ]</span>
+        </span>
+      </div>
+   
+      <div class="campo" onclick="reveal(this)">
+        <span class="campo-label">*Aclaración:</span>
+        <span class="campo-linea">
+          <span class="campo-valor">Sí me distrajiste. Tú tienes la culpa.</span>
+          <span class="campo-hint">[ toca ]</span>
+        </span>
+      </div>
+   
+      <div class="campo" onclick="reveal(this)">
+        <span class="campo-label">18:00 — Estado emocional:</span>
+        <span class="campo-linea">
+          <span class="campo-valor">Quería hablar contigo</span>
+          <span class="campo-hint">[ toca ]</span>
+        </span>
+      </div>
+   
+      <div class="campo" onclick="reveal(this)">
+        <span class="campo-label">23:00 — Pensamiento:</span>
+        <span class="campo-linea">
+          <span class="campo-valor">En usted.</span>
+          <span class="campo-hint">[ toca ]</span>
+        </span>
+      </div>
+    </div>
+   
+    <div class="seccion" id="s3">
+      <p class="sec-titulo">III. Declaración Narrativa</p>
+      <div class="declaracion">
+        Yo, <span class="blank" onclick="fillBlank(this,'Antonio')">________</span>,
+        declaro voluntariamente que
+        <span class="blank" onclick="fillBlank(this,'a Yadira se le vota la canica')">________</span>,
+        que no tiene nada que esconder
+        <span class="blank" onclick="fillBlank(this,'(excepto que me caes muy bien)')">________</span>,
+        y que presento este documento porque
+        <span class="blank" onclick="fillBlank(this,'le queria hacer algo de lo que hago')">________</span>.
+      </div>
+    </div>
+   
+    <div class="firma-area">
+      <div class="firma-col">
+        <div class="firma-linea"></div>
+        <p class="firma-nombre" id="firma-ant" onclick="showStamps()">Antonio</p>
+        <p class="firma-label">DECLARANTE</p>
+      </div>
+      <div class="firma-col">
+        <div class="firma-linea"></div>
+        <p class="firma-nombre" id="firma-yad">Yadira</p>
+        <p class="firma-label">RECEPTORA / VERIFICADORA</p>
+      </div>
+    </div>
+   
+    <button class="final-btn" id="final-btn" onclick="location.reload()">
+      ↩ archivar documento
+    </button>
+   
+    <p class="nota">
+      Este documento es auténtico y fue presentado sin coacción alguna.<br>
+      Válido únicamente ante Yadira. No transferible. No contiene bugs.*<br>
+      *puede contener sentimientos no declarados previamente.
+    </p>
+  </div>
+ 
+  <script src="script.js"></script>
+</body>
+</html>
