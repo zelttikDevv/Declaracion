@@ -8,6 +8,7 @@
 </head>
 <body>
  
+  <!-- INTRO SOBRE -->
   <div id="intro">
     <div class="sobre" onclick="abrirDoc()">
       <div class="sobre-label">
@@ -19,11 +20,13 @@
     <p class="intro-hint">↑ Toca para abrir</p>
   </div>
  
+  <!-- DOCUMENTO -->
   <div id="doc">
    
     <div id="stamp1" class="stamp">Recibido</div>
     <div id="stamp2" class="stamp">Transparente ✓</div>
    
+    <!-- MEMBRETE -->
     <div class="membrete">
       <div class="membrete-left">
         <p class="org-name">Departamento de Transparencia</p>
@@ -36,6 +39,7 @@
       </div>
     </div>
    
+    <!-- I. DATOS DEL DECLARANTE -->
     <div class="seccion" id="s1">
       <p class="sec-titulo">I. Datos del Declarante</p>
    
@@ -72,6 +76,7 @@
       </div>
     </div>
    
+    <!-- II. REPORTE DE MOVIMIENTOS -->
     <div class="seccion" id="s2">
       <p class="sec-titulo">II. Reporte de Movimientos (últimas 24hrs)</p>
    
@@ -116,36 +121,40 @@
       </div>
     </div>
    
+    <!-- III. DECLARACIÓN NARRATIVA -->
     <div class="seccion" id="s3">
       <p class="sec-titulo">III. Declaración Narrativa</p>
       <div class="declaracion">
-        Yo, <span class="blank" onclick="fillBlank(this,'Alberto')">________</span>,
-        declaro voluntariamente que
-        <span class="blank" onclick="fillBlank(this,'Cristal la preciosa')">________</span>,
-        me tiene perdidamente enamorado de ella
-        <span class="blank" onclick="fillBlank(this,'(cada dia me pierdo mas en ella)')">________</span>,
-        y es por ello que presento este documento porque
-        <span class="blank" onclick="fillBlank(this,'debo dejar por escrito que ella sera mi Futura y preciosa esposa.')">________</span>.
+        Yo, <span class="blank" onclick="fillBlank(this,'Alberto')">________</span>, 
+        manifiesto bajo protesta de decir verdad que 
+        <span class="blank" onclick="fillBlank(this,'mi corazón le pertenece a Cristal')">________</span> desde el día uno. 
+        Se establece que los nervios detectados son un efecto secundario de 
+        <span class="blank" onclick="fillBlank(this,'lo preciosa que se ve cada que me mira')">________</span>, 
+        archivando este expediente con la firme convicción de que 
+        <span class="blank" onclick="fillBlank(this,'ella es, y será, la mujer de mi vida y mi futura esposa.')">________</span>.
       </div>
     </div>
    
+    <!-- FIRMAS -->
     <div class="firma-area">
       <div class="firma-col">
         <div class="firma-linea"></div>
-        <p class="firma-nombre" id="firma-ant" onclick="showStamps()">Alberto</p>
+        <p class="firma-nombre" id="firma-alb" onclick="showStamps()">Alberto</p>
         <p class="firma-label">DECLARANTE</p>
       </div>
       <div class="firma-col">
         <div class="firma-linea"></div>
-        <p class="firma-nombre" id="firma-yad">Cristal</p>
+        <p class="firma-nombre" id="firma-cris">Cristal</p>
         <p class="firma-label">RECEPTORA</p>
       </div>
     </div>
    
+    <!-- BOTÓN FINAL -->
     <button class="final-btn" id="final-btn" onclick="location.reload()">
       ↩ archivar documento
     </button>
    
+    <!-- NOTA AL PIE -->
     <p class="nota">
       Este documento es auténtico y fue presentado sin coacción alguna.<br>
       Válido únicamente ante Cristal. No transferible. No contiene bugs.*<br>
@@ -153,6 +162,7 @@
     </p>
   </div>
  
+  <!-- VINCULACIÓN DEL SCRIPT -->
   <script src="script.js"></script>
 </body>
 </html>
