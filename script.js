@@ -14,23 +14,25 @@ function abrirDoc() {
         setTimeout(() => document.getElementById(id).classList.add('show'), i * 200);
       });
       
+      // Muestra las firmas con los nuevos IDs vinculados
       setTimeout(() => {
-        document.getElementById('firma-ant').classList.add('show');
-        document.getElementById('firma-yad').classList.add('show');
+        document.getElementById('firma-alb').classList.add('show');
+        document.getElementById('firma-cris').classList.add('show');
       }, 700);
     }, 100);
   }, 500);
 }
 
 function reveal(el) {
-  // Evitamos que sume clics si ya fue revelado
   if (!el.classList.contains('revealed')) {
     el.classList.add('revealed');
     revealCount++;
     
+    // Al revelar 5 elementos de las bitácoras aparece el primer sello
     if (revealCount >= 5) {
       document.getElementById('stamp1').classList.add('visible');
     }
+    // Al revelar los 9 campos en total aparece el botón de archivar
     if (revealCount >= 9) {
       document.getElementById('final-btn').classList.add('show');
     }
